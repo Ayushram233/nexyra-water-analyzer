@@ -87,5 +87,6 @@ st.bar_chart({
     "Values": [ph, tds, turbidity, hardness, do]
 })
 
-if score < 80:
-    st.info("💡 Suggestion: Consider filtering or treating the water.")
+if 'score' in locals(): # Only run this if score exists
+    if score < 80:
+        st.write("Score is low!")
